@@ -1,0 +1,554 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    
+    <name>SB11 Shared Build Parent</name>
+
+    <groupId>org.opentestsystem.shared</groupId>
+    <artifactId>shared-build-parent</artifactId>
+    <version>0.0.7</version>
+    <packaging>pom</packaging>    
+
+    <modules>
+        <module>shared-quality-config</module>
+    </modules>
+
+    <prerequisites>
+        <maven>3.0.0</maven>
+    </prerequisites>
+
+
+    <scm>
+        <connection>scm:hg:https://bitbucket.org/sbacoss/sharedbuild</connection>
+        <developerConnection>scm:hg:https://bitbucket.org/sbacoss/sharedbuild</developerConnection>
+        <url>https://bitbucket.org/sbacoss/sharedbuild</url>
+    </scm>
+
+    <repositories>
+      <repository>
+        <id>airdev</id>
+        <name>airdev-snapshots</name>
+        <url>http://airdev.artifactoryonline.com/airdev/libs-snapshots-local</url>
+      </repository>
+      <repository>
+	<id>remote-repos</id>
+	<name>remoterepos</name>
+	<url>http://airdev.artifactoryonline.com/airdev/remote-repos/</url>
+      </repository>
+    </repositories>
+
+    <licenses>
+      <license>
+            <name>AIR-License-1.0</name>
+            <url>http://www.smarterapp.org/documents/American_Institutes_for_Research_Open_Source_Software_License.pdf</url>
+            <distribution>repo</distribution>
+            <comments>Educational Online Test Delivery System Copyright (c) 2013 American Institutes for Research</comments>
+        </license>
+    </licenses>
+
+    <properties>
+
+        <!-- project level properties -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <file.encoding>UTF-8</file.encoding>
+
+        <!-- project version dependencies (eventually these will be defined in child poms) -->
+        <shared-quality-config.version>0.0.7</shared-quality-config.version>
+        <sb11-shared-code.version>0.0.6</sb11-shared-code.version>
+        <rest-api-generator.version>0.0.3</rest-api-generator.version>
+        <progman-client.version>0.0.4</progman-client.version>
+        <sb11-mna-client.version>0.0.4</sb11-mna-client.version>
+        <tsb-client.version>0.0.1</tsb-client.version>
+        <tib-client.version>0.0.5</tib-client.version>
+
+        <!-- Spring -->
+        <spring.version>3.2.9.RELEASE</spring.version>
+        <spring-integration.version>3.0.2.RELEASE</spring-integration.version>
+        <spring-security.version>3.2.4.RELEASE</spring-security.version>
+        <spring-security-saml2-core.version>1.0.0.RELEASE</spring-security-saml2-core.version>
+        <spring-integration-sftp.version>3.0.1.RELEASE</spring-integration-sftp.version>
+        <mongo-java-driver.version>2.11.4</mongo-java-driver.version>
+        <spring-data-mongodb.version>1.3.3.RELEASE</spring-data-mongodb.version>
+
+        <!-- Maven Plugins -->
+        <maven-jar-plugin.version>2.4</maven-jar-plugin.version>
+        <maven-scm-provider-gitexe.version>1.8.1</maven-scm-provider-gitexe.version>
+        <maven-release-plugin.version>2.4.2</maven-release-plugin.version>
+        <maven-source-plugin.version>2.2.1</maven-source-plugin.version>
+        <maven-eclipse-plugin.version>2.9</maven-eclipse-plugin.version>
+        <maven-compiler-plugin.version>3.1</maven-compiler-plugin.version>
+        <buildnumber-maven-plugin.version>1.2</buildnumber-maven-plugin.version>
+        <maven-failsafe-plugin.version>2.16</maven-failsafe-plugin.version>
+        <maven-surefire-plugin.version>2.16</maven-surefire-plugin.version>
+        <maven-surefire-report-plugin.version>2.16</maven-surefire-report-plugin.version>
+        <maven-jxr-plugin.version>2.4</maven-jxr-plugin.version>
+        <maven-cobertura-plugin.version>2.6</maven-cobertura-plugin.version>
+        <maven-pmd-plugin.version>3.0.1</maven-pmd-plugin.version>
+        <maven-findbugs-plugin.version>2.5.3</maven-findbugs-plugin.version>
+        <maven-checkstyle-plugin.version>2.11</maven-checkstyle-plugin.version>
+        <maven-javadoc-plugin.version>2.9.1</maven-javadoc-plugin.version>
+        <maven-resources-plugin.version>2.6</maven-resources-plugin.version>
+        <maven-war-plugin.version>2.4</maven-war-plugin.version>
+        <maven-clean-plugin.version>2.5</maven-clean-plugin.version>
+        <maven-deploy-plugin.version>2.8.1</maven-deploy-plugin.version>
+        <maven-install-plugin.version>2.5.1</maven-install-plugin.version>
+        <maven-site-plugin.version>3.3</maven-site-plugin.version>
+
+        <!-- Others -->
+        <java-jdk.version>1.7</java-jdk.version>
+        <junit.version>4.11</junit.version>
+        <jackson-core.version>2.3.0</jackson-core.version>
+        <jackson-annotations.version>2.3.0</jackson-annotations.version>
+        <jackson-datatype-joda.version>2.3.0</jackson-datatype-joda.version>
+        <joda-time.version>2.3</joda-time.version>
+        <hamcrest.version>1.3</hamcrest.version>
+        <aspectj.version>1.7.4</aspectj.version>
+        <slf4j.version>1.7.5</slf4j.version>
+        <logback.version>1.0.13</logback.version>
+        <hibernate-validator.version>5.1.1.Final</hibernate-validator.version>
+        <javax.el.version>2.2.4</javax.el.version>
+        <json-path.version>0.8.1</json-path.version>
+        <embedded-mongo.version>1.46.0</embedded-mongo.version>
+        <javaee-api.version>6.0</javaee-api.version>
+        <servlet-api.version>3.0.1</servlet-api.version>
+        <jsp-api.version>2.2.1</jsp-api.version>
+        <jstl.version>1.2.1</jstl.version>
+        <jstl.library.version>1.2</jstl.library.version>
+        <el-api.version>2.2.4</el-api.version>
+        <javax-inject.version>1</javax-inject.version>
+        <commons-lang.version>2.6</commons-lang.version>
+        <podam.version>3.1.4.RELEASE</podam.version>
+        <httpclient.version>4.3.1</httpclient.version>
+        <commons-io.version>2.4</commons-io.version>
+        <persistence-api.version>1.0.2</persistence-api.version>
+        <commons-beanutils.version>1.9.1</commons-beanutils.version>
+        <cglib.version>3.1</cglib.version>
+        <guava.version>15.0</guava.version>
+        <commons-fileupload.version>1.3</commons-fileupload.version>
+        <jasypt.version>1.9.1</jasypt.version>
+
+    </properties>  
+    <build>
+
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-clean-plugin</artifactId>
+                    <version>${maven-clean-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <version>${maven-deploy-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-install-plugin</artifactId>
+                    <version>${maven-install-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-site-plugin</artifactId>
+                    <version>${maven-site-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven-compiler-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>${maven-jar-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>${maven-resources-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${maven-surefire-plugin.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+
+        <plugins>
+            <plugin>
+                <artifactId>maven-eclipse-plugin</artifactId>
+                <version>${maven-eclipse-plugin.version}</version>
+                <configuration>
+                    <additionalProjectnatures>
+                        <projectnature>org.springframework.ide.eclipse.core.springnature</projectnature>
+                    </additionalProjectnatures>
+                    <additionalBuildcommands>
+                        <buildcommand>org.springframework.ide.eclipse.core.springbuilder</buildcommand>
+                    </additionalBuildcommands>
+                    <downloadSources>true</downloadSources>
+                    <downloadJavadocs>true</downloadJavadocs>
+                </configuration>
+            </plugin>
+
+            <!-- use correct JDK -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
+                <configuration>
+                    <source>${java-jdk.version}</source>
+                    <target>${java-jdk.version}</target>
+                    <compilerArgument>-Xlint:all</compilerArgument>
+                    <showWarnings>true</showWarnings>
+                    <showDeprecation>true</showDeprecation>
+                </configuration>
+            </plugin>
+
+            <!-- For SNAPSHOT releases, this plugin adds the GIT commit SHA-1 
+                hash to the build identifier, so when the SNAPSHOT artifacts are published 
+                to a repository we can identify the exact GIT commit to pull to reproduce 
+                the artifact. -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>buildnumber-maven-plugin</artifactId>
+                <version>${buildnumber-maven-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>create</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            
+            <!-- surefire plugin runs the unit tests (@Test annotated methods starting or ending with "Test" or ending with "TestSuite") -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven-surefire-plugin.version}</version>
+                <configuration>
+                  <forkMode>once</forkMode>
+                  <argLine>-Xms512m -Xmx1024m -XX:MaxPermSize=256m</argLine>
+                  <argLine>-XX:-UseSplitVerifier</argLine>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>integration-test</phase>
+                        <goals>
+                            <goal>test</goal>
+                        </goals>
+                        <configuration>
+                            <argLine>-Xms512m -Xmx1024m -XX:MaxPermSize=256m</argLine>
+                            <argLine>-XX:-UseSplitVerifier</argLine>
+                        </configuration>                        
+                    </execution>
+                </executions>               
+            </plugin>
+            
+            <!-- failsafe plugin runs the integration tests (@Test annotated methods in classes ending with "IT")-->
+            <plugin>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <version>${maven-failsafe-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>integration-test</goal>
+                            <goal>verify</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+                <version>${maven-surefire-report-plugin.version}</version>  
+                <executions>
+                    <execution>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>             
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>${maven-resources-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>copy-resources</id>
+                        <!-- here the phase you need -->
+                        <phase>test</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.outputDirectory}</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>${project.build.directory}/test-classes</directory>
+                                    <includes>
+                                        <include>api_examples.json</include>
+                                    </includes>
+                                    <filtering>true</filtering>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>${maven-source-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- release plugin and gitexe -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>${maven-release-plugin.version}</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-provider-gitexe</artifactId>
+                        <version>${maven-scm-provider-gitexe.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>${maven-clean-plugin.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>${maven-deploy-plugin.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-install-plugin</artifactId>
+                <version>${maven-install-plugin.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>${maven-site-plugin.version}</version>
+            </plugin>
+
+        </plugins>
+    </build>
+    
+    <reporting>
+        <plugins>                                       
+            <!-- 
+                jxr creates cross a reference of the projects source, required by surefire-reports, 
+                pmd, etc. to avoid "Unable to locate Source XRef to link to" message 
+            -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jxr-plugin</artifactId>
+                <version>${maven-jxr-plugin.version}</version>
+            </plugin>   
+            
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>${maven-javadoc-plugin.version}</version>                
+            </plugin>                                                                                                               
+        </plugins>
+    </reporting>
+
+    <profiles>
+        
+        <!-- Include "-P code-quality" to run a build with code quality checks. -->        
+        <profile>
+            <id>code-quality</id>
+
+            <build>
+                <plugins>       
+                    <!-- cobertura generates a test coverage report -->
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>cobertura-maven-plugin</artifactId>
+                        <version>${maven-cobertura-plugin.version}</version>
+                        <configuration>
+                            <formats>
+                                <format>html</format>
+                                <format>xml</format>
+                            </formats>
+                            <check>
+                                <branchRate>85</branchRate>
+                                <lineRate>85</lineRate>
+                                <haltOnFailure>true</haltOnFailure>
+                                <totalBranchRate>85</totalBranchRate>
+                                <totalLineRate>85</totalLineRate>
+                                <packageLineRate>85</packageLineRate>
+                                <packageBranchRate>85</packageBranchRate>
+                            </check>
+                            <instrumentation>
+                                <excludes>
+                                    <exclude>*Test.class</exclude>
+                                </excludes>
+                            </instrumentation>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>cobertura</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>                         
+                    
+                    <!-- pmd generates a test coverage report -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-pmd-plugin</artifactId>
+                        <version>${maven-pmd-plugin.version}</version>
+                        <executions>
+                            <execution>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>pmd</goal>
+                                </goals>
+                            </execution>
+                        </executions> 
+                        <dependencies>
+                            <dependency>
+                                <groupId>org.opentestsystem.shared</groupId>
+                                <artifactId>shared-quality-config</artifactId>
+                                <version>${shared-quality-config.version}</version>
+                            </dependency>
+                        </dependencies>
+                        <configuration>
+                            <targetJdk>${java-jdk.version}</targetJdk>
+                            <linkXref>true</linkXref>
+                            <sourceEncoding>utf-8</sourceEncoding>
+                            <minimumTokens>100</minimumTokens>
+                            <rulesets>
+                                <ruleset>/pmd/sb11_pmd_rules_new.xml</ruleset>
+                            </rulesets>
+                        </configuration>
+                    </plugin>                                        
+                    
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>findbugs-maven-plugin</artifactId>
+                        <version>${maven-findbugs-plugin.version}</version>
+                        <executions>
+                            <execution>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>findbugs</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <dependencies>
+                            <dependency>
+                                <groupId>org.opentestsystem.shared</groupId>
+                                <artifactId>shared-quality-config</artifactId>
+                                <version>${shared-quality-config.version}</version>
+                            </dependency>
+                        </dependencies>
+                        <configuration>
+                        	<excludeFilterFile>findbugs/exclude-filter.xml</excludeFilterFile>
+                            <xmlOutput>true</xmlOutput>
+                            <!-- Optional directory to put findbugs xdoc xml report -->
+                            <xmlOutputDirectory>target/site</xmlOutputDirectory>
+                        </configuration>
+                    </plugin>
+                    
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-checkstyle-plugin</artifactId>
+                        <version>${maven-checkstyle-plugin.version}</version>
+                        <executions>
+                            <execution>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>checkstyle</goal>
+                                </goals>
+                            </execution>
+                        </executions> 
+                        <configuration>
+                            <configLocation>checkstyle/smarter_balanced_checkstyle.xml</configLocation>
+                            <propertyExpansion>basedir=</propertyExpansion>
+                            <enableRulesSummary>false</enableRulesSummary>
+                        </configuration>
+                        <dependencies>
+                            <dependency>
+                                <groupId>org.opentestsystem.shared</groupId>
+                                <artifactId>shared-quality-config</artifactId>
+                                <version>${shared-quality-config.version}</version>
+                            </dependency>
+                        </dependencies>
+                    </plugin>
+                </plugins>
+            </build>
+            
+            <reporting>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>cobertura-maven-plugin</artifactId>
+                        <version>${maven-cobertura-plugin.version}</version>
+                        <reportSets>
+                            <reportSet>
+                                <reports>
+                                    <report>cobertura-integration</report>
+                                </reports>
+                            </reportSet>
+                        </reportSets>
+                        <configuration>
+                            <formats>
+                                <format>html</format>
+                                <format>xml</format>
+                            </formats>
+                        </configuration>
+                    </plugin>
+                    
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-pmd-plugin</artifactId>
+                        <version>${maven-pmd-plugin.version}</version>                        
+                    </plugin>
+                    
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>findbugs-maven-plugin</artifactId>
+                        <version>${maven-findbugs-plugin.version}</version>
+                    </plugin>
+                    
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-checkstyle-plugin</artifactId>
+                        <version>${maven-checkstyle-plugin.version}</version>
+                    </plugin>                    
+                </plugins>
+            </reporting>                                            
+        </profile>
+    </profiles>
+    <!--distributionManagement>
+       <repository>
+            <id>central</id>
+            <name>libs-releases</name>
+            <url>http://airdev.artifactoryonline.com/airdev/libs-releases-local</url>
+        </repository>
+    </distributionManagement-->
+</project> 
