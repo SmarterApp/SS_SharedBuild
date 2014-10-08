@@ -18,23 +18,11 @@
 
 
     <scm>
-        <connection>scm:hg:https://bitbucket.org/sbacoss/sharedbuild</connection>
-        <developerConnection>scm:hg:https://bitbucket.org/sbacoss/sharedbuild</developerConnection>
-        <url>https://bitbucket.org/sbacoss/sharedbuild</url>
+        <connection>scm:hg:https://bitbucket.org/sbacoss/sharedbuild_release</connection>
+        <developerConnection>scm:hg:https://bitbucket.org/sbacoss/sharedbuild_release</developerConnection>
+        <url>https://bitbucket.org/sbacoss/sharedbuild_release</url>
     </scm>
 
-    <repositories>
-      <repository>
-        <id>airdev</id>
-        <name>airdev-snapshots</name>
-        <url>http://airdev.artifactoryonline.com/airdev/libs-snapshots-local</url>
-      </repository>
-      <repository>
-	<id>remote-repos</id>
-	<name>remoterepos</name>
-	<url>http://airdev.artifactoryonline.com/airdev/remote-repos/</url>
-      </repository>
-    </repositories>
 
     <licenses>
       <license>
@@ -544,11 +532,5 @@
             </reporting>                                            
         </profile>
     </profiles>
-    <!--distributionManagement>
-       <repository>
-            <id>central</id>
-            <name>libs-releases</name>
-            <url>http://airdev.artifactoryonline.com/airdev/libs-releases-local</url>
-        </repository>
-    </distributionManagement-->
+
 </project> 
