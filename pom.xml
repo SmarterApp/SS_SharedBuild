@@ -5,7 +5,7 @@
 
     <groupId>org.opentestsystem.shared</groupId>
     <artifactId>shared-build-parent</artifactId>
-    <version>0.0.7-SNAPSHOT</version>
+    <version>0.0.7</version>
     <packaging>pom</packaging>    
 
     <modules>
@@ -41,13 +41,13 @@
         <file.encoding>UTF-8</file.encoding>
 
         <!-- project version dependencies (eventually these will be defined in child poms) -->
-        <shared-quality-config.version>0.0.7-SNAPSHOT</shared-quality-config.version>
-        <sb11-shared-code.version>0.0.6-SNAPSHOT</sb11-shared-code.version>
-        <rest-api-generator.version>0.0.3-SNAPSHOT</rest-api-generator.version>
-        <progman-client.version>0.0.4-SNAPSHOT</progman-client.version>
-        <sb11-mna-client.version>0.0.4-SNAPSHOT</sb11-mna-client.version>
-        <tsb-client.version>0.0.1-SNAPSHOT</tsb-client.version>
-        <tib-client.version>0.0.5-SNAPSHOT</tib-client.version>
+        <shared-quality-config.version>0.0.7</shared-quality-config.version>
+        <sb11-shared-code.version>0.0.6</sb11-shared-code.version>
+        <rest-api-generator.version>0.0.3</rest-api-generator.version>
+        <progman-client.version>0.0.4</progman-client.version>
+        <sb11-mna-client.version>0.0.4</sb11-mna-client.version>
+        <tsb-client.version>0.0.1</tsb-client.version>
+        <tib-client.version>0.0.5</tib-client.version>
 
         <!-- Spring -->
         <spring.version>3.2.9.RELEASE</spring.version>
