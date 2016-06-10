@@ -18,9 +18,9 @@
 
 
     <scm>
-        <connection>scm:hg:https://bitbucket.org/sbacoss/sharedbuild_release</connection>
-        <developerConnection>scm:hg:https://bitbucket.org/sbacoss/sharedbuild_release</developerConnection>
-        <url>https://bitbucket.org/sbacoss/sharedbuild_release</url>
+        <connection>scm:git:https://github.com/SmarterApp/SharedBuild</connection>
+        <developerConnection>scm:git:https://github.com/SmarterApp/SharedBuild</developerConnection>
+        <url>https://github.com/SmarterApp/SharedBuild</url>
     </scm>
 
 
