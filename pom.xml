@@ -46,7 +46,7 @@
         <rest-api-generator.version>0.0.3</rest-api-generator.version>
         <progman-client.version>0.0.4</progman-client.version>
         <sb11-mna-client.version>0.0.4</sb11-mna-client.version>
-        <tsb-client.version>0.0.1</tsb-client.version>
+        <tsb-client.version>R02.00.00</tsb-client.version>
         <tib-client.version>0.0.5</tib-client.version>
 
         <!-- Spring -->
