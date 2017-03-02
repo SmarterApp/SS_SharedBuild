@@ -422,7 +422,7 @@
                             <dependency>
                                 <groupId>org.opentestsystem.shared</groupId>
                                 <artifactId>shared-quality-config</artifactId>
-                                <version>${project.version}</version>
+                                <version>3.0.2-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                         <configuration>
@@ -452,7 +452,7 @@
                             <dependency>
                                 <groupId>org.opentestsystem.shared</groupId>
                                 <artifactId>shared-quality-config</artifactId>
-                                <version>${project.version}</version>
+                                <version>3.0.2-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                         <configuration>
@@ -484,7 +484,7 @@
                             <dependency>
                                 <groupId>org.opentestsystem.shared</groupId>
                                 <artifactId>shared-quality-config</artifactId>
-                                <version>${project.version}</version>
+                                <version>3.0.2-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </plugin>
