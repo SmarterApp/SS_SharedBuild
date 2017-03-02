@@ -5,7 +5,7 @@
 
     <groupId>org.opentestsystem.shared</groupId>
     <artifactId>shared-build-parent</artifactId>
-    <version>0.0.7-SNAPSHOT</version>
+    <version>3.0.3-SNAPSHOT</version>
     <packaging>pom</packaging>    
 
     <modules>
@@ -16,13 +16,12 @@
         <maven>3.0.0</maven>
     </prerequisites>
 
-
     <scm>
-        <connection>scm:git:https://github.com/SmarterApp/SharedBuild</connection>
-        <developerConnection>scm:git:https://github.com/SmarterApp/SharedBuild</developerConnection>
-        <url>https://github.com/SmarterApp/SharedBuild</url>
+        <connection>scm:git:https://github.com/SmarterApp/SS_SharedBuild.git</connection>
+        <developerConnection>scm:git:git://github.com/SmarterApp/SS_SharedBuild.git</developerConnection>
+        <url>https://github.com/SmarterApp/SS_SharedBuild</url>
+        <tag>HEAD</tag>
     </scm>
-
 
     <licenses>
       <license>
@@ -39,15 +38,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <file.encoding>UTF-8</file.encoding>
-
-        <!-- project version dependencies (eventually these will be defined in child poms) -->
-        <shared-quality-config.version>0.0.7-SNAPSHOT</shared-quality-config.version>
-        <sb11-shared-code.version>0.0.6-SNAPSHOT</sb11-shared-code.version>
-        <rest-api-generator.version>0.0.3-SNAPSHOT</rest-api-generator.version>
-        <progman-client.version>0.0.4-SNAPSHOT</progman-client.version>
-        <sb11-mna-client.version>0.0.4-SNAPSHOT</sb11-mna-client.version>
-        <tsb-client.version>0.0.1-SNAPSHOT</tsb-client.version>
-        <tib-client.version>0.0.5-SNAPSHOT</tib-client.version>
 
         <!-- Spring -->
         <spring.version>3.2.9.RELEASE</spring.version>
@@ -130,6 +120,17 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-deploy-plugin</artifactId>
                     <version>${maven-deploy-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-release-plugin</artifactId>
+                    <version>${maven-release-plugin.version}</version>
+                    <configuration>
+                        <tagNameFormat>@{project.version}</tagNameFormat>
+                        <useReleaseProfile>false</useReleaseProfile>
+                        <releaseProfiles>release</releaseProfiles>
+                        <autoVersionSubmodules>true</autoVersionSubmodules>
+                    </configuration>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -308,7 +309,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
-                <version>${maven-release-plugin.version}</version>
                 <dependencies>
                     <dependency>
                         <groupId>org.apache.maven.scm</groupId>
@@ -422,7 +422,7 @@
                             <dependency>
                                 <groupId>org.opentestsystem.shared</groupId>
                                 <artifactId>shared-quality-config</artifactId>
-                                <version>${shared-quality-config.version}</version>
+                                <version>3.0.3-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                         <configuration>
@@ -452,7 +452,7 @@
                             <dependency>
                                 <groupId>org.opentestsystem.shared</groupId>
                                 <artifactId>shared-quality-config</artifactId>
-                                <version>${shared-quality-config.version}</version>
+                                <version>3.0.3-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                         <configuration>
@@ -484,7 +484,7 @@
                             <dependency>
                                 <groupId>org.opentestsystem.shared</groupId>
                                 <artifactId>shared-quality-config</artifactId>
-                                <version>${shared-quality-config.version}</version>
+                                <version>3.0.3-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </plugin>
@@ -533,5 +533,13 @@
             </reporting>                                            
         </profile>
     </profiles>
+
+    <distributionManagement>
+        <repository>
+            <id>central</id>
+            <name>airdev-releases</name>
+            <url>https://airdev.jfrog.io/airdev/libs-releases-local</url>
+        </repository>
+    </distributionManagement>
 
 </project> 
