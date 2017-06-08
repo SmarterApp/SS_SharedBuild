@@ -53,6 +53,8 @@ fabric.properties
 # *.iml
 # modules.xml
 
+*.idea/**
+**/*.iml
 
 ### Maven ###
 target/
