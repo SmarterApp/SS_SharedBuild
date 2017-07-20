@@ -40,7 +40,10 @@
         <file.encoding>UTF-8</file.encoding>
 
         <!-- Spring -->
-        <spring.version>3.2.9.RELEASE</spring.version>
+
+		<spring.version>4.3.9.RELEASE</spring.version>
+		<spring-webflow.version>2.4.5.RELEASE</spring-webflow.version>
+
         <spring-integration.version>3.0.2.RELEASE</spring-integration.version>
         <spring-security.version>3.2.4.RELEASE</spring-security.version>
         <spring-security-saml2-core.version>1.0.0.RELEASE</spring-security-saml2-core.version>
@@ -74,7 +77,7 @@
 
         <!-- Others -->
         <java-jdk.version>1.8</java-jdk.version>
-        <junit.version>4.11</junit.version>
+        <junit.version>4.12</junit.version>
         <jackson-core.version>2.3.0</jackson-core.version>
         <jackson-annotations.version>2.3.0</jackson-annotations.version>
         <jackson-datatype-joda.version>2.3.0</jackson-datatype-joda.version>
@@ -107,6 +110,60 @@
         <jasypt.version>1.9.1</jasypt.version>
 
     </properties>  
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- Intra-project dependencies -->
+
+			<!-- Spring -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-core</artifactId>
+				<version>${spring.version}</version>
+				<exclusions>
+					<!-- Exclude Commons Logging in favor of SLF4j -->
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context</artifactId>
+				<version>${spring.version}</version>
+				<exclusions>
+					<!-- Exclude Commons Logging in favor of SLF4j -->
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.webflow</groupId>
+				<artifactId>spring-faces</artifactId>
+				<version>${spring-webflow.version}</version>
+				<scope>compile</scope>
+				<exclusions>
+					<!-- Exclude Commons Logging in favor of SLF4j -->
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<!-- Test -->
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit.version}</version>
+			</dependency>
+
+		</dependencies>
+	</dependencyManagement>
+
     <build>
 
         <pluginManagement>
