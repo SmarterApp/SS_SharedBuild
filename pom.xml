@@ -40,10 +40,8 @@
         <file.encoding>UTF-8</file.encoding>
 
         <!-- Spring -->
-
-		<spring.version>4.3.9.RELEASE</spring.version>
-		<spring-webflow.version>2.4.5.RELEASE</spring-webflow.version>
-
+        <spring.version>4.3.9.RELEASE</spring.version>
+        <spring-webflow.version>2.4.5.RELEASE</spring-webflow.version>
         <spring-integration.version>3.0.2.RELEASE</spring-integration.version>
         <spring-security.version>3.2.4.RELEASE</spring-security.version>
         <spring-security-saml2-core.version>1.0.0.RELEASE</spring-security-saml2-core.version>
