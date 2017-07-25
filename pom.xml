@@ -40,7 +40,7 @@
         <file.encoding>UTF-8</file.encoding>
 
         <!-- Spring -->
-        <spring.version>4.3.9.RELEASE</spring.version>
+        <spring.version>4.3.10.RELEASE</spring.version>
         <spring-webflow.version>2.4.5.RELEASE</spring-webflow.version>
         <spring-integration.version>3.0.2.RELEASE</spring-integration.version>
         <spring-security.version>3.2.4.RELEASE</spring-security.version>
@@ -164,7 +164,27 @@
             </exclusions>
         </dependency>
 
-			<!-- Test -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
+            <version>1.8.4.RELEASE</version>
+        </dependency>
+
+
+
+        <!-- Test -->
 			<dependency>
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
