@@ -38,20 +38,77 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <file.encoding>UTF-8</file.encoding>
+        <java-jdk.version>1.8</java-jdk.version>
 
         <!-- Spring -->
         <spring.version>4.3.10.RELEASE</spring.version>
         <spring-webflow.version>2.4.5.RELEASE</spring-webflow.version>
-        <spring-integration.version>3.0.2.RELEASE</spring-integration.version>
-        <spring-security.version>3.2.4.RELEASE</spring-security.version>
-        <spring-security-saml2-core.version>1.0.0.RELEASE</spring-security-saml2-core.version>
-        <spring-integration-sftp.version>3.0.1.RELEASE</spring-integration-sftp.version>
+        <spring-integration.version>4.3.11.RELEASE</spring-integration.version>
+        <spring-security.version>4.2.3.RELEASE</spring-security.version>
+        <spring-amq.version>1.7.3.RELEASE</spring-amq.version>
+        <spring-security-oauth2.version>2.2.0.RELEASE</spring-security-oauth2.version>
+        <spring-data.version>Ingalls-SR6</spring-data.version>
         <mongo-java-driver.version>2.14.2</mongo-java-driver.version>
-        <spring-data-mongodb.version>1.10.6.RELEASE</spring-data-mongodb.version>
 
-        <!-- Intra-Project -->
+        <!-- Internal Projects -->
         <sb11-shared-code.version>4.0.1-SNAPSHOT</sb11-shared-code.version>
         <progman-client.version>4.0.1-SNAPSHOT</progman-client.version>
+        <tsb-client.version>3.1.1-SNAPSHOT</tsb-client.version>
+        <sb11-shared-security.version>3.1.2-SNAPSHOT</sb11-shared-security.version>
+        <rest-api-generator.version>3.1.2-SNAPSHOT</rest-api-generator.version>
+        <tds-dll.version>4.0.1-SNAPSHOT</tds-dll.version>
+
+        <!-- Libraries -->
+        <joda-time.version>2.9.9</joda-time.version>
+        <guava.version>15.0</guava.version>
+        <google-auto-value.version>1.5</google-auto-value.version>
+        <jackson.version>2.8.5</jackson.version>
+
+        <!-- Commons -->
+        <commons-io.version>2.4</commons-io.version>
+        <commons-primitives.version>1.0</commons-primitives.version>
+        <commons-beanutils.version>1.9.1</commons-beanutils.version>
+        <commons-collections.version>3.2.1</commons-collections.version>
+        <!-- Until commons lang 3 supports NotImplementedException, we need both v2 and v3. -->
+        <commons-lang.version>2.6</commons-lang.version>
+        <commons-lang-2.version>2.6</commons-lang-2.version>
+        <commons-lang-3.version>3.1</commons-lang-3.version>
+        <commons-configuration.version>1.9</commons-configuration.version>
+        <commons-digester.version>2.1</commons-digester.version>
+        <commons-fileupload.version>1.3</commons-fileupload.version>
+        <httpcomponents.version>4.3.1</httpcomponents.version>
+
+        <!-- Byte Code -->
+        <aspectj.version>1.7.4</aspectj.version>
+        <javax-inject.version>1</javax-inject.version>
+        <cglib.version>3.2.5</cglib.version>
+
+        <!-- Logging -->
+        <logstash-logback.version>4.8</logstash-logback.version>
+        <slf4j.version>1.7.5</slf4j.version> <!-- remove ??? -->
+        <logback.version>1.0.13</logback.version>
+        <janino.version>2.6.1</janino.version>
+
+        <!-- Servlet -->
+        <jsp-api.version>2.2.1-b03</jsp-api.version>
+        <javax-jsp-api.version>2.2.1</javax-jsp-api.version>
+        <servlet-api.version>3.0.1</servlet-api.version>
+        <javax.servlet-api.version>4.0.0-b07</javax.servlet-api.version>
+        <javax.el.version>2.2.4</javax.el.version>
+        <javaee-api.version>6.0</javaee-api.version>
+        <jstl.version>1.2.1</jstl.version>
+        <javax-jstl.version>1.2.1</javax-jstl.version>
+        <jstl.library.version>1.2</jstl.library.version>
+        <el-api.version>2.2.4</el-api.version>
+
+        <!-- Test -->
+        <junit.version>4.12</junit.version>
+        <c3p0.version>0.9.2.1</c3p0.version>
+        <embedded-mongo.version>2.0.0</embedded-mongo.version>
+        <podam.version>3.1.4.RELEASE</podam.version>
+        <mockito-core.version>2.8.47</mockito-core.version>
+        <mockito-all.version>1.10.19</mockito-all.version>
+        <assertj.version>3.8.0</assertj.version>
 
         <!-- Maven Plugins -->
         <maven-jar-plugin.version>2.4</maven-jar-plugin.version>
@@ -78,37 +135,10 @@
         <maven-site-plugin.version>3.3</maven-site-plugin.version>
 
         <!-- Others -->
-        <java-jdk.version>1.8</java-jdk.version>
-        <junit.version>4.12</junit.version>
-        <jackson-core.version>2.8.5</jackson-core.version>
-        <jackson-annotations.version>2.8.5</jackson-annotations.version>
-        <jackson-datatype-joda.version>2.8.5</jackson-datatype-joda.version>
-        <joda-time.version>2.9.9</joda-time.version>
         <hamcrest.version>1.3</hamcrest.version>
-        <aspectj.version>1.7.4</aspectj.version>
-        <slf4j.version>1.7.5</slf4j.version>
-        <logback.version>1.0.13</logback.version>
-        <logstash-logback.version>4.8</logstash-logback.version>
         <hibernate-validator.version>5.1.1.Final</hibernate-validator.version>
-        <javax.el.version>2.2.4</javax.el.version>
         <json-path.version>0.8.1</json-path.version>
-        <embedded-mongo.version>2.0.0</embedded-mongo.version>
-        <javaee-api.version>6.0</javaee-api.version>
-        <servlet-api.version>3.0.1</servlet-api.version>
-        <jsp-api.version>2.2.1</jsp-api.version>
-        <jstl.version>1.2.1</jstl.version>
-        <jstl.library.version>1.2</jstl.library.version>
-        <el-api.version>2.2.4</el-api.version>
-        <javax-inject.version>1</javax-inject.version>
-        <commons-lang.version>2.6</commons-lang.version>
-        <podam.version>3.1.4.RELEASE</podam.version>
-        <httpclient.version>4.3.1</httpclient.version>
-        <commons-io.version>2.4</commons-io.version>
         <persistence-api.version>1.0.2</persistence-api.version>
-        <commons-beanutils.version>1.9.1</commons-beanutils.version>
-        <cglib.version>3.1</cglib.version>
-        <guava.version>15.0</guava.version>
-        <commons-fileupload.version>1.3</commons-fileupload.version>
         <jasypt.version>1.9.1</jasypt.version>
 
     </properties>  
@@ -134,44 +164,212 @@
                 <version>${progman-client.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>org.opentestsystem.shared</groupId>
+                <artifactId>sb11-shared-security</artifactId>
+                <version>${sb11-shared-security.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.opentestsystem.shared</groupId>
+                <artifactId>test-spec-bank-client</artifactId>
+                <version>${tsb-client.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.opentestsystem.authoring</groupId>
+                <artifactId>test-spec-bank-client</artifactId>
+                <version>${tsb-client.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.opentestsystem.delivery</groupId>
+                <artifactId>tds-dll-common</artifactId>
+                <version>${tds-dll.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.opentestsystem.delivery</groupId>
+                <artifactId>tds-dll-api</artifactId>
+                <version>${tds-dll.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.opentestsystem.delivery</groupId>
+                <artifactId>tds-dll-mssql</artifactId>
+                <version>${tds-dll.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.opentestsystem.delivery</groupId>
+                <artifactId>tds-dll-mysql</artifactId>
+                <version>${tds-dll.version}</version>
+            </dependency>
+
+            <!-- Intra-project dependencies -->
+            <dependency>
+                <groupId>org.opentestsystem.shared</groupId>
+                <artifactId>shared-common</artifactId>
+                <version>4.0.2-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.opentestsystem.shared</groupId>
+                <artifactId>shared-config</artifactId>
+                <version>4.0.2-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.opentestsystem.shared</groupId>
+                <artifactId>shared-db</artifactId>
+                <version>4.0.2-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.opentestsystem.shared</groupId>
+                <artifactId>shared-db-test</artifactId>
+                <version>4.0.2-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.opentestsystem.shared</groupId>
+                <artifactId>shared-test</artifactId>
+                <version>4.0.2-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.opentestsystem.shared</groupId>
+                <artifactId>shared-test-jetty-container</artifactId>
+                <version>4.0.2-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.opentestsystem.shared</groupId>
+                <artifactId>shared-security</artifactId>
+                <version>4.0.2-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.opentestsystem.shared</groupId>
+                <artifactId>shared-test-api</artifactId>
+                <version>4.0.2-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.opentestsystem.shared</groupId>
+                <artifactId>shared-threading</artifactId>
+                <version>4.0.2-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.opentestsystem.shared</groupId>
+                <artifactId>shared-tr-api</artifactId>
+                <version>4.0.2-SNAPSHOT</version>
+                <!--<exclusions>-->
+                    <!--<exclusion>-->
+                        <!--<artifactId>bcprov-jdk16</artifactId>-->
+                        <!--<groupId>org.bouncycastle</groupId>-->
+                    <!--</exclusion>-->
+                <!--</exclusions>-->
+            </dependency>
+
+            <!--<dependency>-->
+                <!--<groupId>org.opentestsystem.shared</groupId>-->
+                <!--<artifactId>shared-tr-api</artifactId>-->
+                <!--<version>${shared-master.version}</version>-->
+                <!--<exclusions>-->
+                    <!--<exclusion>-->
+                        <!--<artifactId>bcprov-jdk16</artifactId>-->
+                        <!--<groupId>org.bouncycastle</groupId>-->
+                    <!--</exclusion>-->
+                <!--</exclusions>-->
+            <!--</dependency>-->
+
+            <dependency>
+                <groupId>org.opentestsystem.shared</groupId>
+                <artifactId>shared-web</artifactId>
+                <version>4.0.2-SNAPSHOT</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>bcprov-jdk16</artifactId>
+                        <groupId>org.bouncycastle</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.opentestsystem.shared</groupId>
+                <artifactId>shared-xml</artifactId>
+                <version>4.0.2-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.opentestsystem.shared</groupId>
+                <artifactId>shared-json</artifactId>
+                <version>4.0.2-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.opentestsystem.shared</groupId>
+                <artifactId>shared-log4j</artifactId>
+                <version>4.0.2-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.opentestsystem.shared</groupId>
+                <artifactId>shared-logging</artifactId>
+                <version>4.0.2-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.opentestsystem.shared</groupId>
+                <artifactId>shared-spring</artifactId>
+                <version>4.0.2-SNAPSHOT</version>
+            </dependency>
 
             <!-- Spring -->
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-core</artifactId>
-				<version>${spring.version}</version>
-				<exclusions>
-					<!-- Exclude Commons Logging in favor of SLF4j -->
-					<exclusion>
-						<groupId>commons-logging</groupId>
-						<artifactId>commons-logging</artifactId>
-					</exclusion>
-				</exclusions>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-context</artifactId>
-				<version>${spring.version}</version>
-				<exclusions>
-					<!-- Exclude Commons Logging in favor of SLF4j -->
-					<exclusion>
-						<groupId>commons-logging</groupId>
-						<artifactId>commons-logging</artifactId>
-					</exclusion>
-				</exclusions>
-			</dependency>
+            <!-- http://docs.spring.io/spring-framework/docs/current/spring-framework-reference/html/overview.html#overview-maven-bom -->
             <dependency>
                 <groupId>org.springframework</groupId>
-                <artifactId>spring-web</artifactId>
+                <artifactId>spring-framework-bom</artifactId>
                 <version>${spring.version}</version>
-                <scope>compile</scope>
+                <type>pom</type>
+                <scope>import</scope>
                 <exclusions>
+                    <exclusion>
+                        <groupId>org.springframework</groupId>
+                        <artifactId>spring-aop</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-core</artifactId>
+                <version>${spring.version}</version>
+                <exclusions>
+                    <!-- Exclude Commons Logging in favor of SLF4j -->
                     <exclusion>
                         <groupId>commons-logging</groupId>
                         <artifactId>commons-logging</artifactId>
                     </exclusion>
                 </exclusions>
             </dependency>
+
+            <dependency>
+                <groupId>org.springframework.data</groupId>
+                <artifactId>spring-data-releasetrain</artifactId>
+                <version>${spring-data.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.mongodb</groupId>
+                        <artifactId>mongo-java-driver</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
 			<dependency>
 				<groupId>org.springframework.webflow</groupId>
 				<artifactId>spring-faces</artifactId>
@@ -186,60 +384,417 @@
 				</exclusions>
 			</dependency>
 
-        <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-mongodb</artifactId>
-            <version>${spring-data-mongodb.version}</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.mongodb</groupId>
-                    <artifactId>mongo-java-driver</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
+            <dependency>
+                <groupId>org.mongodb</groupId>
+                <artifactId>mongo-java-driver</artifactId>
+                <version>${mongo-java-driver.version}</version>
+            </dependency>
 
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context-support</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
+            <dependency>
+                <groupId>org.springframework.amqp</groupId>
+                <artifactId>spring-rabbit</artifactId>
+                <version>${spring-amq.version}</version>
+            </dependency>
 
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-jdbc</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
+            <dependency>
+                <groupId>org.springframework.security.oauth</groupId>
+                <artifactId>spring-security-oauth2</artifactId>
+                <version>${spring-security-oauth2.version}</version>
+            </dependency>
 
-        <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-redis</artifactId>
-            <version>1.8.4.RELEASE</version>
-        </dependency>
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-taglibs</artifactId>
+                <version>${spring-security.version}</version>
+            </dependency>
 
-        <dependency>
-            <groupId>org.springframework.security.oauth</groupId>
-            <artifactId>spring-security-oauth2</artifactId>
-            <version>2.1.1.RELEASE</version>
-        </dependency>
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-web</artifactId>
+                <version>${spring-security.version}</version>
+            </dependency>
 
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-core</artifactId>
-            <version>4.2.3.RELEASE</version>
-        </dependency>
+            <!-- a dependency of spring-security-web -->
+            <!-- sb11-shared-code depends on spring-security-core but not  spring-security-web
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-core</artifactId>
+                <version>${spring-security.version}</version>
+            </dependency>
 
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-beans</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-config</artifactId>
+                <version>${spring-security.version}</version>
+            </dependency>
 
-        <!-- Test -->
-			<dependency>
-				<groupId>junit</groupId>
-				<artifactId>junit</artifactId>
-				<version>${junit.version}</version>
-			</dependency>
+            <dependency>
+                <groupId>org.springframework.integration</groupId>
+                <artifactId>spring-integration-core</artifactId>
+                <version>${spring-integration.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>spring-aop</artifactId>
+                        <groupId>org.springframework</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>spring-context</artifactId>
+                        <groupId>org.springframework</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.integration</groupId>
+                <artifactId>spring-integration-amqp</artifactId>
+                <version>${spring-integration.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>spring-tx</artifactId>
+                        <groupId>org.springframework</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.integration</groupId>
+                <artifactId>spring-integration-file</artifactId>
+                <version>${spring-integration.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.integration</groupId>
+                <artifactId>spring-integration-sftp</artifactId>
+                <version>${spring-integration.version}</version>
+            </dependency>
+
+            <!-- libraries -->
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>joda-time</groupId>
+                <artifactId>joda-time</artifactId>
+                <version>${joda-time.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>com.google.auto.value</groupId>
+                <artifactId>auto-value</artifactId>
+                <version>${google-auto-value.version}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <!-- apache commons -->
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons-io.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-primitives</groupId>
+                <artifactId>commons-primitives</artifactId>
+                <version>${commons-primitives.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-collections</groupId>
+                <artifactId>commons-collections</artifactId>
+                <version>${commons-collections.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-lang</groupId>
+                <artifactId>commons-lang</artifactId>
+                <version>${commons-lang-2.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang-3.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-beanutils</groupId>
+                <artifactId>commons-beanutils</artifactId>
+                <version>${commons-beanutils.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>commons-logging</groupId>
+                        <artifactId>commons-logging</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-configuration</groupId>
+                <artifactId>commons-configuration</artifactId>
+                <version>${commons-configuration.version}</version>
+                <exclusions>
+                    <!-- Exclude Commons Logging in favor of SLF4j -->
+                    <exclusion>
+                        <groupId>commons-logging</groupId>
+                        <artifactId>commons-logging</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-digester</groupId>
+                <artifactId>commons-digester</artifactId>
+                <version>${commons-digester.version}</version>
+                <exclusions>
+                    <!-- Exclude Commons Logging in favor of SLF4j -->
+                    <exclusion>
+                        <groupId>commons-logging</groupId>
+                        <artifactId>commons-logging</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-fileupload</groupId>
+                <artifactId>commons-fileupload</artifactId>
+                <version>${commons-fileupload.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${httpcomponents.version}</version>
+                <exclusions>
+                    <!-- Exclude Commons Logging in favor of SLF4j -->
+                    <exclusion>
+                        <groupId>commons-logging</groupId>
+                        <artifactId>commons-logging</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpcore</artifactId>
+                <version>${httpcomponents.version}</version>
+            </dependency>
+
+            <!-- json -->
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.fasterxml.jackson.datatype</groupId>
+                <artifactId>jackson-datatype-guava</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.fasterxml.jackson.datatype</groupId>
+                <artifactId>jackson-datatype-joda</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+
+            <!-- logging -->
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>${logback.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>jcl-over-slf4j</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>log4j-over-slf4j</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.codehaus.janino</groupId>
+                <artifactId>janino</artifactId>
+                <version>${janino.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>net.logstash.logback</groupId>
+                <artifactId>logstash-logback-encoder</artifactId>
+                <version>${logstash-logback.version}</version>
+            </dependency>
+
+            <!-- byte-code -->
+            <dependency>
+                <groupId>cglib</groupId>
+                <artifactId>cglib</artifactId>
+                <version>${cglib.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cglib</groupId>
+                <artifactId>cglib-nodep</artifactId>
+                <version>${cglib.version}</version>
+            </dependency>
+
+            <!-- @Inject -->
+            <dependency>
+                <groupId>javax.inject</groupId>
+                <artifactId>javax.inject</artifactId>
+                <version>${javax-inject.version}</version>
+            </dependency>
+
+            <!-- Servlet -->
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>servlet-api</artifactId>
+                <version>${servlet-api.version}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>${javax.servlet-api.version}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.servlet.jsp</groupId>
+                <artifactId>jsp-api</artifactId>
+                <version>${jsp-api.version}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.servlet.jsp</groupId>
+                <artifactId>javax.servlet.jsp-api</artifactId>
+                <version>${javax-jsp-api.version}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.servlet.jsp.jstl</groupId>
+                <artifactId>javax.servlet.jsp.jstl-api</artifactId>
+                <version>${javax-jstl.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.el</groupId>
+                <artifactId>javax.el-api</artifactId>
+                <version>${javax.el.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.glassfish.web</groupId>
+                <artifactId>javax.el</artifactId>
+                <version>${javax.el.version}</version>
+            </dependency>
+
+            <!-- AspectJ -->
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjrt</artifactId>
+                <version>${aspectj.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjweaver</artifactId>
+                <version>${aspectj.version}</version>
+            </dependency>
+
+            <!-- Test -->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.mchange</groupId>
+                <artifactId>c3p0</artifactId>
+                <version>${c3p0.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.hamcrest</groupId>
+                <artifactId>hamcrest-core</artifactId>
+                <version>${hamcrest.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>de.flapdoodle.embed</groupId>
+                <artifactId>de.flapdoodle.embed.mongo</artifactId>
+                <version>${embedded-mongo.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-core</artifactId>
+                <version>${mockito-core.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-all</artifactId>
+                <version>${mockito-all.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.assertj</groupId>
+                <artifactId>assertj-core</artifactId>
+                <version>${assertj.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>uk.co.jemos.podam</groupId>
+                <artifactId>podam</artifactId>
+                <version>${podam.version}</version>
+                <scope>test</scope>
+
+                <exclusions>
+                    <exclusion>
+                        <groupId>log4j</groupId>
+                        <artifactId>log4j</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
 
 		</dependencies>
 	</dependencyManagement>
