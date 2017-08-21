@@ -5,7 +5,7 @@
 
     <groupId>org.opentestsystem.shared</groupId>
     <artifactId>shared-build-parent</artifactId>
-    <version>3.1.1-SNAPSHOT</version>
+    <version>4.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>    
 
     <modules>
@@ -40,13 +40,18 @@
         <file.encoding>UTF-8</file.encoding>
 
         <!-- Spring -->
-        <spring.version>3.2.9.RELEASE</spring.version>
+        <spring.version>4.3.10.RELEASE</spring.version>
+        <spring-webflow.version>2.4.5.RELEASE</spring-webflow.version>
         <spring-integration.version>3.0.2.RELEASE</spring-integration.version>
         <spring-security.version>3.2.4.RELEASE</spring-security.version>
         <spring-security-saml2-core.version>1.0.0.RELEASE</spring-security-saml2-core.version>
         <spring-integration-sftp.version>3.0.1.RELEASE</spring-integration-sftp.version>
-        <mongo-java-driver.version>2.11.4</mongo-java-driver.version>
-        <spring-data-mongodb.version>1.3.3.RELEASE</spring-data-mongodb.version>
+        <mongo-java-driver.version>2.14.2</mongo-java-driver.version>
+        <spring-data-mongodb.version>1.10.6.RELEASE</spring-data-mongodb.version>
+
+        <!-- Intra-Project -->
+        <sb11-shared-code.version>4.0.1-SNAPSHOT</sb11-shared-code.version>
+        <progman-client.version>4.0.1-SNAPSHOT</progman-client.version>
 
         <!-- Maven Plugins -->
         <maven-jar-plugin.version>2.4</maven-jar-plugin.version>
@@ -73,12 +78,12 @@
         <maven-site-plugin.version>3.3</maven-site-plugin.version>
 
         <!-- Others -->
-        <java-jdk.version>1.7</java-jdk.version>
-        <junit.version>4.11</junit.version>
-        <jackson-core.version>2.3.0</jackson-core.version>
-        <jackson-annotations.version>2.3.0</jackson-annotations.version>
-        <jackson-datatype-joda.version>2.3.0</jackson-datatype-joda.version>
-        <joda-time.version>2.3</joda-time.version>
+        <java-jdk.version>1.8</java-jdk.version>
+        <junit.version>4.12</junit.version>
+        <jackson-core.version>2.8.5</jackson-core.version>
+        <jackson-annotations.version>2.8.5</jackson-annotations.version>
+        <jackson-datatype-joda.version>2.8.5</jackson-datatype-joda.version>
+        <joda-time.version>2.9.9</joda-time.version>
         <hamcrest.version>1.3</hamcrest.version>
         <aspectj.version>1.7.4</aspectj.version>
         <slf4j.version>1.7.5</slf4j.version>
@@ -87,7 +92,7 @@
         <hibernate-validator.version>5.1.1.Final</hibernate-validator.version>
         <javax.el.version>2.2.4</javax.el.version>
         <json-path.version>0.8.1</json-path.version>
-        <embedded-mongo.version>1.46.0</embedded-mongo.version>
+        <embedded-mongo.version>2.0.0</embedded-mongo.version>
         <javaee-api.version>6.0</javaee-api.version>
         <servlet-api.version>3.0.1</servlet-api.version>
         <jsp-api.version>2.2.1</jsp-api.version>
@@ -107,6 +112,138 @@
         <jasypt.version>1.9.1</jasypt.version>
 
     </properties>  
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- Intra-project dependencies -->
+            <dependency>
+                <groupId>org.opentestsystem.shared</groupId>
+                <artifactId>sb11-shared-code</artifactId>
+                <version>${sb11-shared-code.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.opentestsystem.shared</groupId>
+                <artifactId>prog-mgmnt-client</artifactId>
+                <version>${progman-client.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.opentestsystem.shared</groupId>
+                <artifactId>prog-mgmnt-client-null-impl</artifactId>
+                <version>${progman-client.version}</version>
+            </dependency>
+
+
+            <!-- Spring -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-core</artifactId>
+				<version>${spring.version}</version>
+				<exclusions>
+					<!-- Exclude Commons Logging in favor of SLF4j -->
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context</artifactId>
+				<version>${spring.version}</version>
+				<exclusions>
+					<!-- Exclude Commons Logging in favor of SLF4j -->
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-web</artifactId>
+                <version>${spring.version}</version>
+                <scope>compile</scope>
+                <exclusions>
+                    <exclusion>
+                        <groupId>commons-logging</groupId>
+                        <artifactId>commons-logging</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+			<dependency>
+				<groupId>org.springframework.webflow</groupId>
+				<artifactId>spring-faces</artifactId>
+				<version>${spring-webflow.version}</version>
+				<scope>compile</scope>
+				<exclusions>
+					<!-- Exclude Commons Logging in favor of SLF4j -->
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-mongodb</artifactId>
+            <version>${spring-data-mongodb.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.mongodb</groupId>
+                    <artifactId>mongo-java-driver</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
+            <version>1.8.4.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security.oauth</groupId>
+            <artifactId>spring-security-oauth2</artifactId>
+            <version>2.1.1.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+            <version>4.2.3.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <!-- Test -->
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit.version}</version>
+			</dependency>
+
+		</dependencies>
+	</dependencyManagement>
+
     <build>
 
         <pluginManagement>
@@ -422,7 +559,7 @@
                             <dependency>
                                 <groupId>org.opentestsystem.shared</groupId>
                                 <artifactId>shared-quality-config</artifactId>
-                                <version>3.1.1-SNAPSHOT</version>
+                                <version>4.0.1-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                         <configuration>
@@ -452,7 +589,7 @@
                             <dependency>
                                 <groupId>org.opentestsystem.shared</groupId>
                                 <artifactId>shared-quality-config</artifactId>
-                                <version>3.1.1-SNAPSHOT</version>
+                                <version>4.0.1-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                         <configuration>
@@ -484,7 +621,7 @@
                             <dependency>
                                 <groupId>org.opentestsystem.shared</groupId>
                                 <artifactId>shared-quality-config</artifactId>
-                                <version>3.1.1-SNAPSHOT</version>
+                                <version>4.0.1-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </plugin>
