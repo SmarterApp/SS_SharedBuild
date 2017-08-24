@@ -52,10 +52,6 @@
         <mongo-java-driver.version>2.14.2</mongo-java-driver.version>
         <spring-data-mongodb.version>1.10.6.RELEASE</spring-data-mongodb.version>
 
-        <!-- Intra-Project -->
-        <sb11-shared-code.version>4.0.1-SNAPSHOT</sb11-shared-code.version>
-        <progman-client.version>4.0.1-SNAPSHOT</progman-client.version>
-
         <!-- Maven Plugins -->
         <maven-jar-plugin.version>2.4</maven-jar-plugin.version>
         <maven-scm-provider-gitexe.version>1.8.1</maven-scm-provider-gitexe.version>
@@ -118,26 +114,6 @@
 
     <dependencyManagement>
         <dependencies>
-            <!-- Intra-project dependencies -->
-            <dependency>
-                <groupId>org.opentestsystem.shared</groupId>
-                <artifactId>sb11-shared-code</artifactId>
-                <version>${sb11-shared-code.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.opentestsystem.shared</groupId>
-                <artifactId>prog-mgmnt-client</artifactId>
-                <version>${progman-client.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.opentestsystem.shared</groupId>
-                <artifactId>prog-mgmnt-client-null-impl</artifactId>
-                <version>${progman-client.version}</version>
-            </dependency>
-
-
             <!-- Spring -->
             <dependency>
                 <groupId>org.springframework</groupId>
@@ -228,7 +204,23 @@
             <dependency>
                 <groupId>org.springframework.security</groupId>
                 <artifactId>spring-security-core</artifactId>
-                <version>4.2.3.RELEASE</version>
+                <version>${spring-security.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-web</artifactId>
+                <version>${spring-security.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-config</artifactId>
+                <version>${spring-security.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-core</artifactId>
+                <version>${spring-security.version}</version>
             </dependency>
 
             <dependency>
