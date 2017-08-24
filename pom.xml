@@ -5,7 +5,7 @@
 
     <groupId>org.opentestsystem.shared</groupId>
     <artifactId>shared-build-parent</artifactId>
-    <version>4.0.2</version>
+    <version>4.0.3-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
@@ -20,7 +20,7 @@
         <connection>scm:git:https://github.com/SmarterApp/SS_SharedBuild.git</connection>
         <developerConnection>scm:git:git://github.com/SmarterApp/SS_SharedBuild.git</developerConnection>
         <url>https://github.com/SmarterApp/SS_SharedBuild</url>
-        <tag>4.0.2</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <licenses>
@@ -553,7 +553,7 @@
                             <dependency>
                                 <groupId>org.opentestsystem.shared</groupId>
                                 <artifactId>shared-quality-config</artifactId>
-                                <version>4.0.2</version>
+                                <version>4.0.3-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                         <configuration>
@@ -583,7 +583,7 @@
                             <dependency>
                                 <groupId>org.opentestsystem.shared</groupId>
                                 <artifactId>shared-quality-config</artifactId>
-                                <version>4.0.2</version>
+                                <version>4.0.3-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                         <configuration>
@@ -615,7 +615,7 @@
                             <dependency>
                                 <groupId>org.opentestsystem.shared</groupId>
                                 <artifactId>shared-quality-config</artifactId>
-                                <version>4.0.2</version>
+                                <version>4.0.3-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </plugin>
