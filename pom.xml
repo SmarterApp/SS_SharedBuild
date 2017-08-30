@@ -218,7 +218,7 @@
             <dependency>
                 <groupId>org.springframework.security.oauth</groupId>
                 <artifactId>spring-security-oauth2</artifactId>
-                <version>2.1.1.RELEASE</version>
+                <version>2.0.3.RELEASE</version>
                 <exclusions>
                     <!-- Exclude Commons Logging in favor of SLF4j -->
                     <exclusion>
@@ -395,10 +395,6 @@
                 <version>1.0.0.RELEASE</version>
 
                 <exclusions>
-                    <exclusion>
-                        <groupId>xerces</groupId>
-                        <artifactId>xercesImpl</artifactId>
-                    </exclusion>
                     <exclusion>
                         <groupId>xerces</groupId>
                         <artifactId>xercesImpl</artifactId>
