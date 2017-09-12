@@ -45,7 +45,6 @@
         <spring.version>4.3.10.RELEASE</spring.version>
         <spring-security.version>3.2.4.RELEASE</spring-security.version>
         <spring-integration.version>4.3.11.RELEASE</spring-integration.version>
-        <spring-amq.version>1.7.3.RELEASE</spring-amq.version>
         <spring-data.version>Ingalls-SR6</spring-data.version>
         <mongo-java-driver.version>2.14.2</mongo-java-driver.version>
 
@@ -297,7 +296,7 @@
             <dependency>
                 <groupId>org.springframework.amqp</groupId>
                 <artifactId>spring-rabbit</artifactId>
-                <version>${spring-amq.version}</version>
+                <version>1.7.3.RELEASE</version>
                 <exclusions>
                     <!-- Exclude Commons Logging in favor of SLF4j -->
                     <exclusion>
