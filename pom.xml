@@ -5,7 +5,7 @@
 
     <groupId>org.opentestsystem.shared</groupId>
     <artifactId>shared-build-parent</artifactId>
-    <version>4.0.7</version>
+    <version>4.0.8-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
