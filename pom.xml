@@ -5,7 +5,7 @@
 
     <groupId>org.opentestsystem.shared</groupId>
     <artifactId>shared-build-parent</artifactId>
-    <version>4.0.8-SNAPSHOT</version>
+    <version>4.0.9-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
@@ -723,7 +723,7 @@
                             <dependency>
                                 <groupId>org.opentestsystem.shared</groupId>
                                 <artifactId>shared-quality-config</artifactId>
-                                <version>4.0.8-SNAPSHOT</version>
+                                <version>4.0.9-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                         <configuration>
@@ -753,7 +753,7 @@
                             <dependency>
                                 <groupId>org.opentestsystem.shared</groupId>
                                 <artifactId>shared-quality-config</artifactId>
-                                <version>4.0.8-SNAPSHOT</version>
+                                <version>4.0.9-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                         <configuration>
@@ -785,7 +785,7 @@
                             <dependency>
                                 <groupId>org.opentestsystem.shared</groupId>
                                 <artifactId>shared-quality-config</artifactId>
-                                <version>4.0.8-SNAPSHOT</version>
+                                <version>4.0.9-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </plugin>
